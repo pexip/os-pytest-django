@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=pytest-django
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+# Tests not enabled because required django-configurations not yet packaged
+# in Debian
+# 	PYTHONPATH=. \
+# 	dh_auto_test -- --system=custom --test-args="{interpreter} -m pytest --ds=pytest_django_test.settings_sqlite --strict -r fEsxXw"

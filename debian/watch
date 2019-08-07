@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/pytest-django-$1\.tar\.gz/ \
+  https://github.com/pytest-dev/pytest-django/tags .*/v?(\d\S+)\.tar\.gz
